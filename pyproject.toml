@@ -1,0 +1,20 @@
+#build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "MEPD"
+version = "1.0.0"
+description = "Microsoft Edge Password Decrypt"
+authors = [{ name = "rishabh-a7da6" }, { name = "Udodelige" }]
+license = { file = "LICENSE" }
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = ["pycryptodome", "pycryptodomex"]
+
+
+[project.urls]
+Homepage = "https://github.com/0xudodelige/mepd/"
+
+[project.scripts]
+mepd = "mepd:main"

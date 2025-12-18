@@ -1,0 +1,12 @@
+# Python cache
+__pycache__/
+*.pyc
+build/
+*.egg-info/
+
+# Input/Output files (to avoid uploading your test data)
+*.txt
+*.csv
+*.bak
+!requirements.txt
+!LICENSE
