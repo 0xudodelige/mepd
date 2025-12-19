@@ -17,7 +17,7 @@ If you have a shell on the target, simply run:
 ```bash
 python mepd.py
 ```
-*It will automatically find the Local State, decrypt the Master Key using DPAPI, and dump all profiles.
+*It will automatically find the Local State, decrypt the Master Key using DPAPI, and dump all profiles.*
 
 ### Offline Decryption (Linux)
 
